@@ -1,1 +1,1 @@
-Jekyll powered Github page.
+A Bootstrap based blog template 

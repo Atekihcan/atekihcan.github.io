@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    {{ content }}
+    {% include footer.html%}
+    <script src="{{ '/assets/js/site.js' | prepend: site.baseurl }}"></script>
+</body>
+</html>
