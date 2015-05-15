@@ -2,7 +2,9 @@
 <html lang="en">
 {% include head.html %}
 <body>
-    {{ content }}
+    <div class="container-fluid">
+        {{ content }}
+    </div>
     {% include footer.html%}
     <script src="{{ '/assets/js/site.js' | prepend: site.baseurl }}"></script>
 </body>

@@ -118,43 +118,45 @@ blockquote{
 .page-content{
     font-size: 1.2em;
     text-align: justify;
-    hyphens: auto;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
 }
 
- .page-footer{
-    margin-top: 20px;
-    padding-top: 5px;
-    font-size: 1.2em;
-    font-family: 'Josefin Sans', sans-serif;
- }
-
- .page-footer .left{
-    width: 15%;
-    text-align: left;
-    font-size: 1.8em;
-}
-
- .page-footer .middle{
-    width: 70%;
+/* project grid */
+.project-item{
+    height: 250px;
     text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #333;
 }
 
- .page-footer .right{
-    width: 15%;
-    text-align: right;
-    font-size: 1.8em;
+.project-title{
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #09c;
 }
 
- .page-footer .left-small{
-    text-align: left;
+.project-tag{
+    color: #33b5e5;
+}
+
+.project-descr{
     font-size: 0.9em;
+    padding-top: 5px;
+    color: #111;
 }
 
- .page-footer .right-small{
-    text-align: right;
-    font-size: 0.9em;
+.project-link{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+@media (max-width: 768px){
+    .project-link{
+        bottom: 0px;
+    }
 }
 
 /* footer */

@@ -1,0 +1,13 @@
+projlist:
+    sendroid:
+        url:    "/Sendroid/"
+        title:  "Sendroid"
+        tag:    "Android App"
+        icon:   fa-paper-plane
+        descr:  "Sendroid helps you to easily send selected text or links right from your browser to your android device."
+    clrs:
+        url:    "/CLRS/"
+        title:  "Solutions for CLRS"
+        tag:    "Algorithms"
+        icon:   fa-laptop
+        descr:  "Solutions to exercise and problems of Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein."
