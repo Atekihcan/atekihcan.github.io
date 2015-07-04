@@ -8,7 +8,7 @@ layout: default
             <div class="page">
                 <article class="page-content">
                     <div class="text-center">
-                        <img class ="profile-img" src="/assets/img/profile.png" />
+                        <img class ="profile-img" src="{{ site.logo_location | prepend: site.baseurl }}" />
                     </div>
                 </article>
             </div>
@@ -21,10 +21,10 @@ layout: default
                     <a href="/projects/" title="Projects"><i class="fa fa-briefcase"></i></a>
                 </td>
                 <td>
-                    <a href="/" title="Blog"><i class="fa fa-list-alt"></i></a>
+                    <a href="/blog/" title="Blog"><i class="fa fa-list-alt"></i></a>
                 </td>
                 <td>
-                    <a href="/" title="Contact"><i class="fa fa-quote-right"></i></a>
+                    <a href="/contact/" title="Contact"><i class="fa fa-quote-right"></i></a>
                 </td>
             </tr>
         </table>

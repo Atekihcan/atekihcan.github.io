@@ -162,6 +162,16 @@ blockquote{
     }
 }
 
+/* contact form*/
+.contact-form {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.form-control {
+    text-align: center;
+}
+
 /* footer */
 .footer {
     background-color: #f5f5f5;
