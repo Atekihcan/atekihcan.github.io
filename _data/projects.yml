@@ -5,6 +5,12 @@ projlist:
         tag:    "Android | Firefox | Chrome"
         icon:   fa-paper-plane
         descr:  "Sendroid helps you to easily send selected text or links right from your browser to your android device."
+    webgl:
+        url:    "/webgl/"
+        title:  "WebGL Examples"
+        tag:    "WebGL | Graphics"
+        icon:   fa-cube
+        descr:  "Some WebGL examples and assignments submitted for Interactive Computer Graphics with WebGL in Coursera."
     clrs:
         url:    "/CLRS/"
         title:  "Solutions for CLRS"
