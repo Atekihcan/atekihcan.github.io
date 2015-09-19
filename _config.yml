@@ -17,8 +17,8 @@ kramdown:
 highlighter:        pygments
 
 # Serving
-#url:                "http://atekihcan.github.io"
-#baseurl:            ""
+url:                "http://atekihcan.github.io"
+baseurl:            ""
 
 # Outputting
 permalink:          /:title/
