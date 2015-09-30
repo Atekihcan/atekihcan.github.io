@@ -4,8 +4,6 @@ author:             Atekihcan
 email:              com.atekihcan@gmail.com
 description:        "A blog about Algorithms, Python, Image Processing, Pattern Recognition and Machine Learning, and a little bit of Android."
 keywords:           "atekihcan, python, jekyll, algorithms, machine learning, pattern recognition"
-logo_location:      "/assets/img/profile.png"
-favicon:            "/assets/img/favicon.png"
 
 # Handling Reading
 exclude:            ['README.md', 'LICENSE.md']
