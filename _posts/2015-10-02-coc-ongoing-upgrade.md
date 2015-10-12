@@ -4,6 +4,5 @@ title:  COC
 ---
 
 <div style="text-align: center;">
-    <span>Upgrade Schedule</span><br/>
     <img src="{{ '/assets/img/upgrade.jpg' | prepend: site.baseurl }}" style="width: 100%; height: auto;" />
 </div>
