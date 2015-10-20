@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Abel|Lato:400,700);
+
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+.resume-header {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    line-height: 0.8em;
+    transform:scale(0.5,1);
+    -webkit-transform:scale(0.5,1);
+}
+
+/* project grid */
+.project-card{
+    height: 200px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #333;
+}
+
+.project-title{
+    padding: 0px;
+    text-align: center;
+    font-weight: 700;
+    color: #09c;
+}
+
+.project-descr{
+    padding: 0px;
+    font-size: 0.9em;
+    padding-top: 5px;
+    color: #111;
+}
+
+.project-tags{
+    padding: 0px;
+    font-size: 0.8em;
+}
+
+.project-tag{
+    color: #33b5e5;
+    background: #fefefe;
+}
+
+@media (max-width: 768px){
+    .project-item{
+        height: 200px;
+    }
+    .project-link{
+        bottom: 0px;
+    }
+}

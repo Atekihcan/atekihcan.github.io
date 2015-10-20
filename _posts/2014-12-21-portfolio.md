@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  Projects
+title:  Portfolio
 ---
 
 <div class="row">
     {% for item in site.data.projects.projlist %}
-        <div class="col-sm-6 xs-12">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="project-item">
                 <div class="col-md-12 project-title">
                     <strong>{{ item[1].title }}</strong>

@@ -4,8 +4,8 @@ mainmenu:
         text:   "Home"
         icon:   fa-home
     projects:
-        url:    "/projects/"
-        text:   "Projects"
+        url:    "/portfolio/"
+        text:   "Portfolio"
         icon:   fa-briefcase
     blog:
         url:    "/blog/"

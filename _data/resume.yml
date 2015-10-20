@@ -1,0 +1,106 @@
+profile:
+    about:          A little about me
+    summary:        Summary of what I do and did
+    objective:      Objective for future
+
+personal_experience:
+    sendroid:
+        name:       Sendroid
+        url:        "/Sendroid/"
+        summary:    Android utility application to share web page contents from PC browser to Android devices
+        key_points:
+            - Designed and developed the application from scratch within a couple of weeks
+            - Involved learning about Android SDK as well as Mozilla Add-on SDK and Google Chrome extension development
+            - Involved creating graphics like app logo, playstore banners using Photoshop
+        knowledge:
+            - Android Application Development
+            - Google Cloud Messaging framework
+            - Browser Extension Development
+        skills:
+            - Java
+            - Javascript
+            - HTML
+            - CSS
+            - Android Studio
+            - Git
+    webgl:
+        name:       WebGL Demos
+        url:        "/webgl/"
+        summary:    A collection of various web applications using 3D graphics, created as part of a [MOOC](https://www.coursera.org/course/webgl)
+        key_points:
+            - Some notable applications are - [CAD](http://atekihcan.github.io/webgl/assignment03.html), [Texturing](http://atekihcan.github.io/webgl/assignment05.html) and a 3D version of popular game [2048](http://atekihcan.github.io/webgl/2048_3d.html)
+            - All the web apps are responsive in nature and most of them are fully functional in Chrome for Android with touch support
+        knowledge:
+            - WebGL APIs
+            - Object Oriented Design
+            - Interactive Web Application
+            - Responsive Webpage Development
+        skills:
+            - WebGL
+            - Javascript
+            - HTML
+            - CSS
+            - Bootstrap
+
+professional_experience:
+    samsung:
+        company:    "Samsung R&D Institue India"
+        place:      Bangalore
+        team:       Graphics
+        division:   Multimedia and Systems Division
+        position:
+            - { name: Lead Engineer, from: { year: 2015, month: Jan }, to: Present }
+        summary:    Developed and tested OpenGL ES 3.1 driver
+        roles:
+            - Developing 3D graphics driver following the OpenGL ES 3.1 and related AEP (Android Extension Pack) standards
+            - Notable new features included indirect draw calls, tessellation and geometry shaders
+            - Writing unit tests for the newly implemented features
+            - Benchmarking driver progress and coverage using GFXBench 3.1 and 4.0 by Kishonti Informatics
+        knowledge:
+            - Graphics Driver Development
+            - Agile Scrum Software Development
+            - Writing Unit Test Cases
+        skills:
+            - OpenGL ES
+            - C++
+    samsung:
+        company:    "Samsung R&D Institue India"
+        place:      Bangalore
+        team:       Visual Display
+        division:   Consumer Electronics
+        position:
+            - { name: Lead Engineer, from: { year: 2014, month: April }, to: { year: 2014, month: December } }
+            - { name: Lead Engineer, from: { year: 2012, month: July }, to: { year: 2014, month: March } }
+        summary:    Developed and maintained 3D graphics device driver for Samsung Digital TV SoC
+        roles:
+            - Integrating and customizing ARM Mali T600/400 GPU driver for Linux and Tizen digital TV platform
+            - Debugging and resolving various graphics driver issues like memory leak, rendering artefacts etc
+            - Benchmarking GPU performance using OpenGL and OpenCL benchmarks by Kishonti Informatics
+            - Collaborating with ARM HQ (Cambridge) to resolve GPU issues
+        knowledge:
+            - ARM MALI T600/400 GPU Driver
+            - Graphics Driver Development
+            - Debugging Driver Issues
+            - Lauterbach Trace32
+        skills:
+            - OpenGL ES
+            - GNU Binutils
+            - CMake
+    vecc:
+        company:    "Variable Energy Cyclotron Centre"
+        place:      Kolkata
+        team:       Visual Display
+        division:   Computer and Informatics
+        position:
+            - { name: Industrial Trainee, from: { year: 2010, month: April }, to: { year: 2010, month: June } }
+        summary:    Developed an image reconstruction algorithm to enhance gamma ray spectroscopic images
+        roles:
+            - Developing a de-convolution based image reconstruction algorithm to enhance gamma ray spectroscopic images
+            - Achieving a tradeoff between cost and performance with success rate of 76.03%
+        knowledge:
+            - Image Processing
+        skills:
+            - MATLAB
+            - Linux
+
+last_updated:       2015-10-20

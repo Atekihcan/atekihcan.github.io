@@ -11,6 +11,9 @@
     <link media="all" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link media="all" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link media="all" rel="stylesheet" href="{{ '/assets/css/site.css' | prepend: site.baseurl }}">
+	{% if page.resume %}
+    <link media="all" rel="stylesheet" href="{{ '/assets/css/resume.css' | prepend: site.baseurl }}">
+	{% endif %}
     <link media="all" rel="stylesheet" href="{{ '/assets/css/syntax_highlight.css' | prepend: site.baseurl }}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -58,8 +58,8 @@ blockquote{
 
 /* page */
 .profile-img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     padding: 10px;
     border: 8px double #aaa;
     border-radius: 50%;
@@ -70,7 +70,8 @@ blockquote{
     text-align: center;
 }
 
-.home-menu td {
+.home-menu div {
+    width: auto;
     display: inline-block;
     background: #fff;
     border: 2px solid #ddd;
@@ -120,6 +121,11 @@ blockquote{
     text-align: justify;
 }
 
+.about-me {
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 2px 2px 5px #999;
+}
+
 /* project grid */
 .project-item{
     height: 250px;
@@ -155,7 +161,7 @@ blockquote{
 
 @media (max-width: 768px){
     .project-item{
-        height: 300px;
+        height: 200px;
     }
     .project-link{
         bottom: 0px;
