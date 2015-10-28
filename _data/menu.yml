@@ -3,6 +3,10 @@ mainmenu:
         url:    "/"
         text:   "Home"
         icon:   fa-home
+    resume:
+        url:    "/resume/"
+        text:   "Resume"
+        icon:   fa-list-alt
     projects:
         url:    "/portfolio/"
         text:   "Portfolio"
@@ -10,7 +14,7 @@ mainmenu:
     blog:
         url:    "/blog/"
         text:   "Blog"
-        icon:   fa-list-alt
+        icon:   fa-align-justify
     contact:
         url:    "/contact/"
         text:   "Contact"
