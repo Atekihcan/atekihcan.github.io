@@ -1,7 +1,60 @@
 profile:
-    about:          A little about me
+    firstname:      Nachiketa
+    lastname:       Das
+    image:          "profile.png"
+    mail:           "nachiketa.info@gmail.com"
+    phone:          "+91-9483314645"
+    place:          Bangalore
+    country:        India
+    about:          I'm a graphics driver developer by profession who spends most of his free time either developing interactive web applications or learning about new technologies. I believe in organized, detail oriented software and web designs with intuitive interfaces which results in superior user experience.
     summary:        Summary of what I do and did
     objective:      Objective for future
+
+skills:
+    graphics:
+        name:       Graphics
+        skill_list:
+            - { name: OpenGL ES, level: 5 }
+            - { name: WebGL, level: 4 }
+            - { name: Shaders, level: 3.5 }
+            - { name: ARM Mali, level: 3 }
+    web:
+        name:       Web
+        skill_list:
+            - { name: Debugging, level: 4.5 }
+            - { name: "Jekyll, Liquid", level: 4.5 }
+            - { name: Bootstrap, level: 4 }
+            - { name: Event Handling, level: 4 }
+            - { name: XML Schema, level: 3 }
+    programming:
+        name:       Programming
+        skill_list:
+            - { name: "HTML, CSS", level: 4 }
+            - { name: "C, Javascript", level: 4 }
+            - { name: Python, level: 3.5 }
+            - { name: GLSL, level: 3 }
+            - { name: "Java, Bash", level: 2 }
+    others:
+        name:       Other
+        skill_list:
+            - { name: Git, level: 4 }
+            - { name: Android, level: 3 }
+            - { name: Google Analytics, level: 3 }
+
+tools:
+    development:
+        name:       Development
+        tool_list:
+            - { name: Web Debugger, level: 4.5 }
+            - { name: GNU Binutils, level: 3.5 }
+            - { name: Android Studio, level: 3 }
+            - { name: Mali Debugger, level: 3 }
+            - { name: Trace32, level: 2.5 }
+    design:
+        name:       Design
+        tool_list:
+            - { name: Photoshop, level: 4 }
+            - { name: Gimp, level: 3 }
 
 personal_experience:
     sendroid:
@@ -17,11 +70,11 @@ personal_experience:
             - Google Cloud Messaging framework
             - Browser Extension Development
         skills:
+            - Android
             - Java
             - Javascript
             - HTML
             - CSS
-            - Android Studio
             - Git
     webgl:
         name:       WebGL Demos
@@ -43,19 +96,19 @@ personal_experience:
             - Bootstrap
 
 professional_experience:
-    samsung:
+    03:
+        role:       Lead Engineer
+        from:       { year: 2015, month: January }
+        to:         { year: Present, month: }
         company:    "Samsung R&D Institue India"
         place:      Bangalore
         team:       Graphics
-        division:   Multimedia and Systems Division
-        position:
-            - { name: Lead Engineer, from: { year: 2015, month: Jan }, to: Present }
-        summary:    Developed and tested OpenGL ES 3.1 driver
-        roles:
-            - Developing 3D graphics driver following the OpenGL ES 3.1 and related AEP (Android Extension Pack) standards
-            - Notable new features included indirect draw calls, tessellation and geometry shaders
-            - Writing unit tests for the newly implemented features
-            - Benchmarking driver progress and coverage using GFXBench 3.1 and 4.0 by Kishonti Informatics
+        division:   Multimedia and Systems
+        summary:    Develop, test and benchmark OpenGL ES 3.1 and Android Extension Pack driver
+        key_points:
+            - Developing 3D graphics driver following OpenGL ES 3.1 and related AEP (Android Extension Pack) standards
+            - Notable new features are indirect draw calls, tessellation and geometry shaders
+            - Unit testing and benchmarking driver progress using GFXBench 3.1 and 4.0 by Kishonti Informatics
         knowledge:
             - Graphics Driver Development
             - Agile Scrum Software Development
@@ -63,20 +116,21 @@ professional_experience:
         skills:
             - OpenGL ES
             - C++
-    samsung:
+            - Unit Testing
+            - Agile
+    02:
+        role:       Lead Engineer
+        from:       { year: 2014, month: April }
+        to:         { year: 2014, month: December }
         company:    "Samsung R&D Institue India"
         place:      Bangalore
-        team:       Visual Display
-        division:   Consumer Electronics
-        position:
-            - { name: Lead Engineer, from: { year: 2014, month: April }, to: { year: 2014, month: December } }
-            - { name: Lead Engineer, from: { year: 2012, month: July }, to: { year: 2014, month: March } }
-        summary:    Developed and maintained 3D graphics device driver for Samsung Digital TV SoC
-        roles:
+        team:       Graphics
+        division:   Visual Display
+        summary:    Develop and maintain 3D graphics device driver for digital TV SoC
+        key_points:
             - Integrating and customizing ARM Mali T600/400 GPU driver for Linux and Tizen digital TV platform
             - Debugging and resolving various graphics driver issues like memory leak, rendering artefacts etc
-            - Benchmarking GPU performance using OpenGL and OpenCL benchmarks by Kishonti Informatics
-            - Collaborating with ARM HQ (Cambridge) to resolve GPU issues
+            - Benchmarking GPU performance using GFXBenchmark and CompuBenchCL by Kishonti Informatics
         knowledge:
             - ARM MALI T600/400 GPU Driver
             - Graphics Driver Development
@@ -84,17 +138,41 @@ professional_experience:
             - Lauterbach Trace32
         skills:
             - OpenGL ES
-            - GNU Binutils
+            - ARM Mali
+            - Debugging
             - CMake
-    vecc:
+    01:
+        role:       Senior Software Engineer
+        from:       { year: 2012, month: July }
+        to:         { year: 2014, month: March }
+        company:    "Samsung R&D Institue India"
+        place:      Bangalore
+        team:       Graphics
+        division:   Visual Display
+        summary:    Debug and benchamrk ARM Mali GPU driver for digital TV SoC
+        key_points:
+            - Integrating and customizing ARM Mali T600 GPU driver for Linux digital TV platform
+            - Benchmarking GPU performance using graphics benchmarks by Kishonti Informatics
+            - Writing small-scale OpenGL ES application to debug GPU issues
+        knowledge:
+            - ARM MALI T600 GPU Driver
+            - Graphics Driver Development
+            - Debugging Driver Issues
+            - Lauterbach Trace32
+        skills:
+            - OpenGL ES
+            - Device Driver
+            - Debugging
+    00:
+        role:       Industrial Trainee
+        from:       { year: 2010, month: April }
+        to:         { year: 2010, month: June }
         company:    "Variable Energy Cyclotron Centre"
         place:      Kolkata
-        team:       Visual Display
+        team:       
         division:   Computer and Informatics
-        position:
-            - { name: Industrial Trainee, from: { year: 2010, month: April }, to: { year: 2010, month: June } }
-        summary:    Developed an image reconstruction algorithm to enhance gamma ray spectroscopic images
-        roles:
+        summary:    Develop image reconstruction algorithm to enhance gamma ray spectroscopic images
+        key_points:
             - Developing a de-convolution based image reconstruction algorithm to enhance gamma ray spectroscopic images
             - Achieving a tradeoff between cost and performance with success rate of 76.03%
         knowledge:
@@ -103,4 +181,57 @@ professional_experience:
             - MATLAB
             - Linux
 
-last_updated:       2015-10-20
+academic_experience:
+    03:
+        type:       M.Tech Project 
+        title:      Distributed Video Coding
+        from:       { year: 2011, month: June }
+        to:         { year: 2012, month: April }
+        institute:  Indian Institue of Technology
+        place:      Kharagpur
+        summary:    Designed a low-complexity video encoder using distributed coding techniques based on Slepian and Wolf’s and Wyner and Ziv’s information-theoretic results.
+    02:
+        type:       B.Tech Project 
+        title:      Simulating Imaging System
+        from:       { year: 2010, month: July }
+        to:         { year: 2010, month: April }
+        institute:  Indian Institue of Technology
+        place:      Kharagpur
+        summary:    Developed a simulation environment of the Synthetic Aperture Radar (SAR) imaging systems by proposing a mathematical model of radar raw data generation.
+    01:
+        type:       Term Project 
+        title:      Character Recognition
+        from:       { year: 2011, month: March }
+        to:         { year: 2011, month: April }
+        institute:  Indian Institue of Technology
+        place:      Kharagpur
+        summary:    Developed a basic Devanagari character recognition method using image segmentation, edge detection, and other image processing techniques.
+    00:
+        type:       Term Project 
+        title:      Fingerprint Identification
+        from:       { year: 2009, month: October }
+        to:         { year: 2009, month: November }
+        institute:  Indian Institue of Technology
+        place:      Kharagpur
+        summary:    Developed a robust fingerprint identification workflow using the concepts of genetic algorithm.
+
+education:
+    01:
+        type:       College
+        degree:     Dual Degree (B.Tech + M.Tech)
+        from:       { year: 2007, month: June }
+        to:         { year: 2012, month: May }
+        institute:  Indian Institue of Technology
+        place:      Kharagpur
+        summary:    Graduated with bachelors in Electronics and Electrical Communication Engineering and masters with specialization in Visual Information Processing and Embedded Systems
+
+    00:
+        type:       High School
+        degree:     Higher Secondary School
+        from:       { year: 2005, month: May }
+        to:         { year: 2007, month: April }
+        institute:  Ramakrishna Mission Vidyalaya
+        place:      Narendrapur
+        summary:    Completed high school with major in Science (Physics, Chemistry, Mathematics, and Biology).
+
+last_updated:       2015-10-28 16:00

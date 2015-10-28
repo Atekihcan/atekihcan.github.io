@@ -4,54 +4,100 @@ body {
     font-family: 'Abel', sans-serif;
 }
 
+.resume-section {
+    padding: 20px 0px 0px 0px;
+    border-bottom: 1px solid #999;
+}
+
+.resume-section * {
+    padding: 0px;
+}
+
 .resume-header {
+    padding-bottom: 20px;
     text-align: center;
+}
+
+.resume-header span{
+    width: 200%;
+    display: block;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 1.8em;
     text-transform: uppercase;
+    word-spacing: 0.5em;
     line-height: 0.8em;
     transform:scale(0.5,1);
     -webkit-transform:scale(0.5,1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+@media (min-width: 768px){
+    .resume-header span{
+        white-space: normal;
+        text-align: left;
+        word-spacing: normal;
+    }
 }
 
 /* project grid */
 .project-card{
-    height: 200px;
-    border: 2px solid #aaa;
-    border-radius: 5px;
-    box-shadow: 3px 3px 8px #333;
+    height: 220px;
+    padding: 0px 10px;
+    box-shadow: 1px 1px 3px #333;
 }
 
 .project-title{
-    padding: 0px;
     text-align: center;
     font-weight: 700;
     color: #09c;
 }
 
+.project-duration {
+    font-size: 0.8em;
+    text-align: center;
+    color: #058;
+}
+
+.project-infoline{
+    font-size: 0.8em;
+    text-align: center;
+    color: #111;
+}
+
 .project-descr{
-    padding: 0px;
+    text-align: center;
     font-size: 0.9em;
     padding-top: 5px;
     color: #111;
 }
 
+.project-key-points{
+    height: 165px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 2px;
+    font-size: 0.8em;
+    padding-top: 5px;
+    color: #111;
+}
+
 .project-tags{
-    padding: 0px;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
     font-size: 0.8em;
 }
 
 .project-tag{
+    padding: 1px;
+    margin: 1px;
     color: #33b5e5;
-    background: #fefefe;
+    border: 1px dashed #eef;
 }
 
-@media (max-width: 768px){
-    .project-item{
-        height: 200px;
-    }
-    .project-link{
-        bottom: 0px;
-    }
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.75em;
+    text-transform: uppercase;
 }
