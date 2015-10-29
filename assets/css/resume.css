@@ -1,9 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Abel|Lato:400,700);
-
-body {
-    font-family: 'Abel', sans-serif;
-}
-
 .resume-section {
     padding: 20px 0px 0px 0px;
     border-bottom: 1px solid #999;
@@ -35,7 +29,6 @@ body {
 
 @media (min-width: 768px){
     .resume-header span{
-        white-space: normal;
         text-align: left;
         word-spacing: normal;
     }

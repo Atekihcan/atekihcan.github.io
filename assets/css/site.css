@@ -1,9 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Abel|Lato:400,700|Josefin+Sans:400,400italic,700,700italic);
+
+html {
+    height: 100%;
+}
 
 body {
-    font-family: 'Verdana', Helvetica, sans-serif;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    min-height: 100%;
+    position: relative;
+    font-family: 'Abel', 'Verdana', Helvetica, sans-serif;
+    padding: 60px 0px;
 }
 
 @media (max-width: 992px) {
@@ -122,7 +127,6 @@ blockquote{
 }
 
 .about-me {
-    font-family: 'Josefin Sans', sans-serif;
     text-shadow: 2px 2px 5px #999;
 }
 
@@ -176,18 +180,21 @@ blockquote{
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
 	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
 }
 
 /* flip speed goes here */
 .flipper {
 	transition: 1.0s;
 	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -198,11 +205,13 @@ blockquote{
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
 }
 
 /* contact form*/
@@ -218,9 +227,9 @@ blockquote{
 /* footer */
 .footer {
     background-color: #f5f5f5;
+    position: absolute;
     left: 0;
     bottom: 0;
     min-height: 10px;
-    position: fixed;
     width: 100%;
 }
