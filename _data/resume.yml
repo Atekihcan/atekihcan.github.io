@@ -60,6 +60,7 @@ personal_experience:
     sendroid:
         name:       Sendroid
         url:        "/Sendroid/"
+        github:     "https://github.com/Atekihcan/Sendroid"
         summary:    Android utility application to share web page contents from PC browser to Android devices
         key_points:
             - Designed and developed the application from scratch within a couple of weeks
@@ -79,10 +80,12 @@ personal_experience:
     webgl:
         name:       WebGL Demos
         url:        "/webgl/"
+        github:     "https://github.com/Atekihcan/webgl/tree/gh-pages"
         summary:    A collection of various web applications using 3D graphics, created as part of a [MOOC](https://www.coursera.org/course/webgl)
         key_points:
+            - All shaders and textures are asynchronously loaded and models are loaded via JSON
             - Some notable applications are - [CAD](http://atekihcan.github.io/webgl/assignment03.html), [Texturing](http://atekihcan.github.io/webgl/assignment05.html) and a 3D version of popular game [2048](http://atekihcan.github.io/webgl/2048_3d.html)
-            - All the web apps are responsive in nature and most of them are fully functional in Chrome for Android with touch support
+            - All the web apps are responsive in nature and most of them are fully functional in Chrome for Android
         knowledge:
             - WebGL APIs
             - Object Oriented Design
