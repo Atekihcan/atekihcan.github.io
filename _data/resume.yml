@@ -181,39 +181,50 @@ professional_experience:
             - MATLAB
             - Linux
 
+freelance_experience:
+    00:
+        role:       Content Developer
+        from:       { year: 2010, month: October }
+        to:         { year: 2012, month: November }
+        brand:      "Gurome"
+        summary:    Developed quantitative problems (problem solving and data sufficiency) for GMAT mock papers and participated in forum discussion under brand username
+        skills:
+            - Problem Solving
+            - MS Word
+
 academic_experience:
     03:
-        type:       M.Tech Project 
+        type:       M.Tech Project
         title:      Distributed Video Coding
         from:       { year: 2011, month: June }
         to:         { year: 2012, month: April }
         institute:  Indian Institue of Technology
         place:      Kharagpur
-        summary:    Designed a low-complexity video encoder using distributed coding techniques based on Slepian and Wolf’s and Wyner and Ziv’s information-theoretic results.
+        summary:    Designed a low-complexity video encoder using distributed coding techniques based on Slepian and Wolf’s and Wyner and Ziv’s information-theoretic results
     02:
-        type:       B.Tech Project 
+        type:       B.Tech Project
         title:      Simulating Imaging System
         from:       { year: 2010, month: July }
         to:         { year: 2010, month: April }
         institute:  Indian Institue of Technology
         place:      Kharagpur
-        summary:    Developed a simulation environment of the Synthetic Aperture Radar (SAR) imaging systems by proposing a mathematical model of radar raw data generation.
+        summary:    Developed a simulation environment of the Synthetic Aperture Radar (SAR) imaging systems by proposing a mathematical model of radar raw data generation
     01:
-        type:       Term Project 
+        type:       Term Project
         title:      Character Recognition
         from:       { year: 2011, month: March }
         to:         { year: 2011, month: April }
         institute:  Indian Institue of Technology
         place:      Kharagpur
-        summary:    Developed a basic Devanagari character recognition method using image segmentation, edge detection, and other image processing techniques.
+        summary:    Developed a basic Devanagari character recognition method using image segmentation, edge detection, and other image processing techniques
     00:
-        type:       Term Project 
+        type:       Term Project
         title:      Fingerprint Identification
         from:       { year: 2009, month: October }
         to:         { year: 2009, month: November }
         institute:  Indian Institue of Technology
         place:      Kharagpur
-        summary:    Developed a robust fingerprint identification workflow using the concepts of genetic algorithm.
+        summary:    Developed a robust fingerprint identification workflow using the concepts of genetic algorithm
 
 education:
     01:
@@ -232,6 +243,10 @@ education:
         to:         { year: 2007, month: April }
         institute:  Ramakrishna Mission Vidyalaya
         place:      Narendrapur
-        summary:    Completed high school with major in Science (Physics, Chemistry, Mathematics, and Biology).
+        summary:    Completed high school with major in Science (Physics, Chemistry, Mathematics, and Biology)
+
+achievements:
+    - Selected for the top 100 among 20,000 submissions worldwide in photography competition organized by Google in 2012 - [[Google Photography Prize](http://www.google.com/landing/photographyprize/winners.html)]
+    - Actively participated in dramatics in college and performed (acting and/or direction) in 10 different plays as part of the Bengali technology Dramatics Society
 
 last_updated:       2015-10-28 16:00
