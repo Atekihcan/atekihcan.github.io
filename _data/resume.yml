@@ -100,8 +100,8 @@ personal_experience:
 
 professional_experience:
     05:
-        role:       Lead Engineer
-        from:       { year: 2016, month: June }
+        role:       Technical Lead
+        from:       { year: 2016, month: May }
         to:         { year: Present, month: }
         company:    "Samsung R&D Institue India"
         place:      Bangalore
@@ -120,7 +120,7 @@ professional_experience:
     04:
         role:       Lead Engineer
         from:       { year: 2016, month: January }
-        to:         { year: 2016, month: May }
+        to:         { year: 2016, month: April }
         company:    "Samsung R&D Institue India"
         place:      Bangalore
         team:       Graphics
