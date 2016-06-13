@@ -99,10 +99,48 @@ personal_experience:
             - Bootstrap
 
 professional_experience:
+    05:
+        role:       Lead Engineer
+        from:       { year: 2016, month: June }
+        to:         { year: Present, month: }
+        company:    "Samsung R&D Institue India"
+        place:      Bangalore
+        team:       Graphics
+        division:   Multimedia and Systems
+        summary:    Virtual Reality Framework
+        key_points:
+            - Developing VR application using GearVR framework
+        knowledge:
+            - GearVR Framework
+            - Android
+        skills:
+            - OpenGL ES
+            - Virtual Reality
+            - Android
+    04:
+        role:       Lead Engineer
+        from:       { year: 2016, month: January }
+        to:         { year: 2016, month: May }
+        company:    "Samsung R&D Institue India"
+        place:      Bangalore
+        team:       Graphics
+        division:   Multimedia and Systems
+        summary:    Develop and Prototype 360 Content Applications Like Viewers and Editors
+        key_points:
+            - Prototyping 360 content viewer on Android with navigational support
+            - Correcting projection distortions to improve 360 content viewing experience
+            - Supporting multimedia solutions on GPU
+        knowledge:
+            - 360 Content Rendering
+            - Android Application Development
+        skills:
+            - OpenGL ES
+            - Android
+            - Agile
     03:
         role:       Lead Engineer
         from:       { year: 2015, month: January }
-        to:         { year: Present, month: }
+        to:         { year: 2015, month: December }
         company:    "Samsung R&D Institue India"
         place:      Bangalore
         team:       Graphics
