@@ -1,1 +1,3 @@
-A Bootstrap based blog template 
+# Personal Website
+
+Empty landing page
