@@ -19,10 +19,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "astro": "^7.1.0",
     "@astrojs/mdx": "^7.0.3",
-    "@astrojs/rss": "^4.0.0",
     "@astrojs/sitemap": "^3.0.0",
+    "astro": "^7.1.0",
     "katex": "^0.16.0",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0"

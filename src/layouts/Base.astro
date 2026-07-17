@@ -19,12 +19,6 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{fullTitle}</title>
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title={siteTitle}
-      href="/rss.xml"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,21 +35,29 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     <header class="site-header">
       <div class="header-content">
         <a href="/" class="site-logo">atekihcan</a>
-        <div class="header-right">
-          <nav class="site-nav">
-            <a href="/blog/">blog</a>
-            <a href="/about/">about</a>
-            <a href="/rss.xml">rss</a>
-          </nav>
-          <ThemeToggle />
-        </div>
+        <ThemeToggle />
       </div>
     </header>
     <main class:list={['site-main', { wide }]}>
       <slot />
     </main>
     <footer class="site-footer">
-      <p>&copy; {new Date().getFullYear()} Nachiketa Das</p>
+      <div class="footer-links">
+        <span class="footer-group">
+          <a href="/blog/">Blog</a>
+          <a href="/about/">About</a>
+        </span>
+        <span class="footer-sep">/</span>
+        <span class="footer-group">
+          <a href="https://atekihcan.github.io/CLRS/" target="_blank" rel="noopener">CLRS</a>
+        </span>
+        <span class="footer-sep">/</span>
+        <span class="footer-group">
+          <a href="https://linkedin.com/in/atekihcan" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/atekihcan" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://github.com/atekihcan" target="_blank" rel="noopener">GitHub</a>
+        </span>
+      </div>
     </footer>
   </body>
 </html>
@@ -160,12 +162,6 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     justify-content: space-between;
   }
 
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-  }
-
   .site-logo {
     color: #fff !important;
     font-size: 1.2rem;
@@ -175,22 +171,6 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
   }
 
   .site-logo:hover {
-    text-decoration: none;
-  }
-
-  .site-nav {
-    display: flex;
-    gap: 1.25rem;
-  }
-
-  .site-nav a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.85rem;
-    letter-spacing: 0.3px;
-  }
-
-  .site-nav a:hover {
-    color: #fff;
     text-decoration: none;
   }
 
@@ -212,6 +192,33 @@ const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     color: var(--text-muted);
     font-size: 0.8rem;
     border-top: 1px solid var(--border);
+  }
+
+  .footer-links {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-group {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .footer-sep {
+    color: var(--border);
   }
 
   /* ===== Post content typography ===== */

@@ -33,7 +33,6 @@ const allCategories = [...new Set(posts.flatMap((p) => p.data.categories))].sort
               {post.data.date.toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'short',
-                day: 'numeric',
               })}
             </time>
           </a>
