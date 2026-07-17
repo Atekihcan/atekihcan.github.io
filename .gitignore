@@ -1,1 +1,13 @@
-_site/
+# Logs
+*.log*
+
+# Dependency directories
+node_modules/
+
+# Astro output
+dist/
+.astro/
+
+# Claude
+CLAUDE.md
+.claude/

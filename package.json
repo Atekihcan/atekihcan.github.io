@@ -1,0 +1,30 @@
+{
+  "name": "atekihcan",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "Personal website of Nachiketa Das",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Atekihcan/Atekihcan.git"
+  },
+  "author": {
+    "name": "Nachiketa Das",
+    "email": "nachiketa.info@gmail.com",
+    "url": "https://atekihcan.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "astro": "^6.4.7",
+    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/rss": "^4.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "katex": "^0.16.0",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^6.0.0"
+  }
+}

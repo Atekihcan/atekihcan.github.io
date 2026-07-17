@@ -1,0 +1,84 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { postUrl } from '../../../lib/slugs';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  const categories = [...new Set(posts.flatMap((p) => p.data.categories))];
+
+  return categories.map((cat) => ({
+    params: { category: cat },
+    props: {
+      category: cat,
+      posts: posts
+        .filter((p) => p.data.categories.includes(cat) && !p.data.draft)
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+
+<Base title={`${category} posts`}>
+  <h1>{category}</h1>
+  <p><a href="/blog/">&larr; All posts</a></p>
+
+  <ul class="post-list">
+    {
+      posts.map((post: any) => (
+        <li>
+          <a href={postUrl(post as any)}>
+            <span class="post-title">{post.data.title}</span>
+            <time datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+            </time>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
+
+<style>
+  h1 {
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+
+  .post-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    gap: 1rem;
+  }
+
+  .post-list a:hover {
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .post-title {
+    font-weight: 500;
+  }
+
+  .post-list time {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+</style>

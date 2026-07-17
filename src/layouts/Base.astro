@@ -1,0 +1,418 @@
+---
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  wide?: boolean;
+}
+
+const { title, description = 'Personal website of Nachiketa Das', wide = false } = Astro.props;
+const siteTitle = 'atekihcan';
+const fullTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteTitle}
+      href="/rss.xml"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <a href="/" class="site-logo">atekihcan</a>
+        <div class="header-right">
+          <nav class="site-nav">
+            <a href="/blog/">blog</a>
+            <a href="/about/">about</a>
+            <a href="/rss.xml">rss</a>
+          </nav>
+          <ThemeToggle />
+        </div>
+      </div>
+    </header>
+    <main class:list={['site-main', { wide }]}>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>&copy; {new Date().getFullYear()} Nachiketa Das</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  /* ===== Theme variables ===== */
+  html[data-theme='light'] {
+    --bg: #fafaf9;
+    --bg-secondary: #f0f0ee;
+    --text: #1a1a2e;
+    --text-muted: #64645e;
+    --accent: hsl(193, 100%, 30%);
+    --accent-light: hsl(193, 80%, 42%);
+    --border: #e2e2de;
+    --code-bg: #1a1b26;
+    --code-text: #a9b1d6;
+    --header-bg: #1a1a2e;
+    --inline-code-bg: #e8e8e4;
+    --inline-code-text: #1a1a2e;
+    --sidenote-bg: transparent;
+    --callout-green-bg: rgba(60, 179, 113, 0.08);
+    --callout-green-border: mediumseagreen;
+    --callout-red-bg: rgba(220, 20, 60, 0.08);
+    --callout-red-border: crimson;
+  }
+
+  html[data-theme='dark'] {
+    --bg: #161618;
+    --bg-secondary: #1e1e22;
+    --text: #e0e0dc;
+    --text-muted: #8a8a84;
+    --accent: hsl(193, 80%, 50%);
+    --accent-light: hsl(193, 70%, 60%);
+    --border: #2a2a2e;
+    --code-bg: #1a1b26;
+    --code-text: #a9b1d6;
+    --header-bg: #111113;
+    --inline-code-bg: #2a2a30;
+    --inline-code-text: #e0e0dc;
+    --sidenote-bg: transparent;
+    --callout-green-bg: rgba(60, 179, 113, 0.1);
+    --callout-green-border: hsl(147, 40%, 45%);
+    --callout-red-bg: rgba(220, 20, 60, 0.1);
+    --callout-red-border: hsl(348, 60%, 50%);
+  }
+
+  /* ===== Reset ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 4px;
+  }
+
+  /* ===== Layout ===== */
+  .site-header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .header-content {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .site-logo {
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+
+  .site-logo:hover {
+    text-decoration: none;
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .site-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+  }
+
+  .site-nav a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .site-main {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    flex: 1;
+  }
+
+  .site-main.wide {
+    max-width: 1100px;
+  }
+
+  .site-footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ===== Post content typography ===== */
+  .post-content h2,
+  .post-content h3,
+  .post-content h4 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+  }
+
+  .post-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .post-content h4 {
+    font-size: 1rem;
+  }
+
+  .post-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  .post-content ul,
+  .post-content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .post-content li {
+    margin-bottom: 0.4rem;
+  }
+
+  .post-content li::marker {
+    color: var(--text-muted);
+  }
+
+  .post-content blockquote {
+    border-left: 2px solid var(--accent);
+    padding: 0.25rem 1rem;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+  }
+
+  .post-content code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85em;
+    background: var(--inline-code-bg);
+    color: var(--inline-code-text);
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+  }
+
+  .post-content pre {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    background: var(--code-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .post-content pre code {
+    background: none !important;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+
+  .post-content hr {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 2.5rem 0;
+  }
+
+  .post-content a {
+    text-decoration-line: underline;
+    text-decoration-color: var(--border);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s;
+  }
+
+  .post-content a:hover {
+    text-decoration-color: var(--accent);
+  }
+
+  /* ===== Callout boxes (from old posts) ===== */
+  .highlight-red {
+    padding: 0.75rem 1rem;
+    margin: 1.5rem 0;
+    background: var(--callout-red-bg);
+    border-left: 3px solid var(--callout-red-border);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+  }
+
+  .highlight-green {
+    padding: 0.75rem 1rem;
+    margin: 1.5rem 0;
+    background: var(--callout-green-bg);
+    border-left: 3px solid var(--callout-green-border);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+  }
+
+  /* ===== KaTeX ===== */
+  .katex-display {
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+
+  /* ===== Sidenotes ===== */
+  .sidenote-wrapper {
+    position: relative;
+  }
+
+  .sidenote-number {
+    counter-increment: sidenote-counter;
+  }
+
+  label.sidenote-number {
+    cursor: pointer;
+  }
+
+  label.sidenote-number::after {
+    content: counter(sidenote-counter);
+    font-size: 0.7rem;
+    vertical-align: super;
+    line-height: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  input.sidenote-toggle {
+    display: none;
+  }
+
+  .sidenote {
+    display: none;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    counter-increment: sidenote-counter;
+  }
+
+  /* Narrow / regular: inline expand on click */
+  input.sidenote-toggle:checked + .sidenote {
+    display: block;
+    margin: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    border-left: 2px solid var(--accent);
+  }
+
+  /* Wide / deep-dive: margin notes */
+  @media (min-width: 1100px) {
+    .wide .sidenote {
+      display: block;
+      float: right;
+      clear: right;
+      width: 280px;
+      margin-right: -330px;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      padding: 0;
+      background: none;
+      border-left: none;
+      border-radius: 0;
+    }
+
+    .wide input.sidenote-toggle:checked + .sidenote {
+      background: none;
+      margin-left: 0;
+      padding: 0;
+      border-left: none;
+    }
+
+    .wide label.sidenote-number {
+      cursor: default;
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    html {
+      font-size: 16px;
+    }
+
+    .site-main {
+      padding: 1.5rem 1rem;
+    }
+  }
+</style>

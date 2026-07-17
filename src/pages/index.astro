@@ -1,0 +1,141 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { postUrl } from '../lib/slugs';
+import site from '../data/site.json';
+
+function inlineMarkdown(text: string): string {
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(?<!\w)_([^_]+)_(?!\w)/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, url) => {
+      if (/^https?:\/\//.test(url)) {
+        return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
+      }
+      return `<a href="${url}">${label}</a>`;
+    });
+}
+
+const posts = (await getCollection('posts'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+---
+
+<Base title="atekihcan">
+  <section class="hero">
+    {site.intro.map((line) => <p set:html={inlineMarkdown(line)} />)}
+  </section>
+
+  {site.currently.length > 0 && (
+    <section class="now">
+      <h2 class="section-title">Currently</h2>
+      <ul>
+        {site.currently.map((item) => <li set:html={inlineMarkdown(item)} />)}
+      </ul>
+    </section>
+  )}
+
+  <section>
+    <h2 class="section-title">Recent Posts</h2>
+    <ul class="post-list">
+      {
+        posts.map((post) => (
+          <li>
+            <a href={postUrl(post)}>
+              <span class="post-title">{post.data.title}</span>
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p><a href="/blog/">View all posts &rarr;</a></p>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    margin-bottom: 2.5rem;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .now {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .now ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .now li {
+    padding: 0.3rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .now li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .post-list li {
+    margin-bottom: 0;
+  }
+
+  .post-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    gap: 1rem;
+  }
+
+  .post-list a:hover {
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .post-list time {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .post-title {
+    font-weight: 500;
+  }
+</style>

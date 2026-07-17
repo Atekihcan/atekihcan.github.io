@@ -1,0 +1,33 @@
+---
+import Post from '../../../layouts/Post.astro';
+import { getCollection, render } from 'astro:content';
+import { postSlug } from '../../../lib/slugs';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  return posts
+    .filter((p) => !p.data.draft)
+    .map((post) => ({
+      params: {
+        category: post.data.categories[0],
+        slug: postSlug(post.id),
+      },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const isDeepDive = post.data.layout === 'deep-dive';
+---
+
+<Post
+  title={post.data.title}
+  description={post.data.description}
+  date={post.data.date}
+  categories={post.data.categories}
+  wide={isDeepDive}
+>
+  <Content />
+</Post>
